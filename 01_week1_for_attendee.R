@@ -514,6 +514,14 @@ df_1[df_1$bb %in% c(1,4),]
 #### __ [17] 파일 입출력 ####
 #### ____ ● 파일 불러오기 ####
 
+df = read.csv("rating_ramyun.csv")
+head(df,2)
+
+
+library("readx1")
+df= read_excel("iris_xlsx.xlsx")
+head(df , 2)
+
 #### ____ ● 다양한 데이터 불러오기 ####
 # life_expectancy
 
@@ -526,3 +534,9 @@ df_1[df_1$bb %in% c(1,4),]
 # store_apple
 
 #### ____ ● 파일 저장하기 ####
+
+df_1
+
+write.csv(df_1, "df_1.csv", row.names = FALSE)
+write.csv(df_1, "df_3", row.names = TRUE )
+write.csv(df_1, "df_4.csv" )
