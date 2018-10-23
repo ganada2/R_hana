@@ -495,7 +495,19 @@ for ( n in 1:4){
 df_1 = data.frame(aa = c("a", "b", "c", "d"),
                   bb = 1:4)
 
+df_1
 # 실습
+df_1[df_1$bb > 3,]
+
+df_1[df_1$aa =="b",]
+
+df_1[df_1$aa != "b",]
+
+df_1[(df_1$bb>1) & (df_1$bb< 4),]
+df_1[(df_1$bb>1) | (df_1$bb< 4),]
+df_1[(df_1$bb == 1) | (df_1$bb ==4),]
+
+df_1[df_1$bb %in% c(1,4),]
 
 
 
