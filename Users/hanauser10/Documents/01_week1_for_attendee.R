@@ -136,25 +136,41 @@ rep(1:5, each = 4)
 
 #### ____ ● 객체 구조 ####
 # 벡터 - c()
+c(1,2,3)
+c(1,2,"a")
 
 # 행렬 - matrix() 
+matrix(1:6, nrow=2)
+matrix(1:6, ncol=1)
+matrix(1:6, nrow=2,byrow = TRUE)
+aa=matrix(1:6, ncol=2, byrow = TRUE)
+aa[1,]
+aa[,1]
+
 
 # 데이터 프레임 - data.frame()
+df = data.frame(aa = 1:3,
+                bb = c("a","b","c")
+                )
+df
 
 # 리스트 - list()
 
 #### ____ ● 자료구조 - 이미지 ####
+install.packages("imager")
 library("imager")
 img = load.image("sample_cat_image.jpg")
-
+img
 #### ____ ● 자료구조 - 웹페이지 ####
 web = readLines("sample_webpage_text.txt")
+web[1:3]
+
 
 #### __ [08] 패키지 ####
 #### ____ ● 개요
 
 #### ____ ● 패키지 설치(인터넷 O) ####
-# install.packages("beepr")
+#install.packages("beepr")
 
 #### ____ ● 패키지 설치(인터넷 X) ####
 # https://cran.r-project.org/
@@ -178,8 +194,10 @@ web = readLines("sample_webpage_text.txt")
 
 #### ____ ● 작업폴더 확인과 설정 ####
 # 작업폴더 확인 - getwd()
+getwd()
 
 # 작업폴더 설정 - setwd()
+setwd()
 
 #### ____ ● 데이터 가져오기 실습 - 특정 구분자 ####
 
